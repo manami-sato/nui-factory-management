@@ -4,6 +4,7 @@ export type orderApiType = {
     mm: number;
     dd: number;
   };
+  id: string[];
   status: string;
   nui: string[];
   goods: string[];

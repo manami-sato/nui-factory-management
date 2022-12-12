@@ -4,46 +4,26 @@ import Data from '../src/components/Data';
 import Heading from '../src/components/Heading';
 import Navigation from '../src/components/Navigation';
 import OriginalSpacer from '../src/components/OriginalSpacer';
-import { orderApiType } from '../src/types/api';
+import { orderApi, orderPath } from '../src/libs/api';
+import { orderApiHeading } from '../src/libs/apiHeading';
 
-const orderApiHeading = [
-  '日時',
-  'ステータス',
-  'ぬいぐるみ',
-  'グッズ',
-  '注文者名',
-  '会計',
-  '決済方法',
+const hoge = [
+  'りんかく',
+  'め',
+  'まゆ',
+  'みみ',
+  'はな',
+  'ほほ',
+  'くち',
+  'まえがみ',
+  'うしろがみ',
+  'オプション',
+  'こもの1',
+  'こもの2',
+  'ふく',
 ];
 
-const orderApi: orderApiType[] = [
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    status: '未発送',
-    nui: ['aDsafSvd'],
-    goods: [],
-    customer: '三枝明那',
-    total: 10000,
-    settlement: 'クレジット',
-  },
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    status: '未発送',
-    nui: ['aDsafSvd'],
-    goods: [],
-    customer: '三枝明那',
-    total: 10000,
-    settlement: 'クレジット',
-  },
-];
+console.log(orderPath);
 
 const Home: NextPage = ({}) => {
   return (

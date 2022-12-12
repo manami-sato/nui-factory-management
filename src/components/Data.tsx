@@ -19,6 +19,7 @@ const Data: FC<Props> = ({ heading, orderApi, messageApi }) => {
       dataArray[i].push(
         `${orderApi[i].date.yyyy}/${orderApi[i].date.mm}/${orderApi[i].date.dd}`,
         orderApi[i].status,
+        orderApi[i].id,
         orderApi[i].nui,
         orderApi[i].goods,
         orderApi[i].customer,
