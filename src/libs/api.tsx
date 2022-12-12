@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { messageApiType, orderApiType } from '../types/api';
 
+export const nuiApi: string[] = ['aDsafSvd', 'DNrgakJ'];
+
 export const orderApi: orderApiType[] = [
   {
     date: {
@@ -10,7 +12,7 @@ export const orderApi: orderApiType[] = [
     },
     id: ['0000', '0000', '0000'],
     status: '未発送',
-    nui: ['aDsafSvd'],
+    nui: [nuiApi[0]],
     goods: [],
     customer: '三枝明那',
     total: 10000,
@@ -24,7 +26,7 @@ export const orderApi: orderApiType[] = [
     },
     id: ['1111', '1111', '1111'],
     status: '未発送',
-    nui: ['aDsafSvd'],
+    nui: [nuiApi[1]],
     goods: [],
     customer: '三枝明那',
     total: 10000,
@@ -62,10 +64,13 @@ export const messageApi: messageApiType[] = [
 const setPath = (data: any) => {
   let array: string[] = [];
   for (let i = 0; i < data.length; i++) {
-    array.push(data[i].id);
+    for (let i2 = 0; i2 < data[i].nui.length; i2++) {
+      array.push(data[i].nui[i2]);
+      // array.push(data[i].id);
+    }
   }
   return array;
 };
 
-export const messagePath = setPath(messageApi);
+// export const messagePath = setPath(messageApi);
 export const orderPath = setPath(orderApi);

@@ -18,8 +18,8 @@ const Data: FC<Props> = ({ heading, orderApi, messageApi }) => {
       dataArray.push([]);
       dataArray[i].push(
         `${orderApi[i].date.yyyy}/${orderApi[i].date.mm}/${orderApi[i].date.dd}`,
-        orderApi[i].status,
         orderApi[i].id,
+        orderApi[i].status,
         orderApi[i].nui,
         orderApi[i].goods,
         orderApi[i].customer,
@@ -65,7 +65,21 @@ const Data: FC<Props> = ({ heading, orderApi, messageApi }) => {
           <Box as="tr" key={i}>
             {item.map((itemData, i2) => (
               <Box as="td" key={itemData + i2} p="16px 0" textAlign="center">
-                {itemData}
+                {i2 === 3 ? (
+                  <NextLink passHref href={`/order/${itemData}`}>
+                    <Text
+                      as="span"
+                      textDecoration="underline"
+                      _hover={{
+                        textDecoration: 'none',
+                      }}
+                    >
+                      {itemData}
+                    </Text>
+                  </NextLink>
+                ) : (
+                  <>{itemData}</>
+                )}
               </Box>
             ))}
           </Box>

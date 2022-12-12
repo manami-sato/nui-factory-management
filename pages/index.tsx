@@ -1,11 +1,13 @@
 import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import Contents from '../src/components/Contents';
 import Data from '../src/components/Data';
 import Heading from '../src/components/Heading';
 import Navigation from '../src/components/Navigation';
 import OriginalSpacer from '../src/components/OriginalSpacer';
 import { orderApi, orderPath } from '../src/libs/api';
 import { orderApiHeading } from '../src/libs/apiHeading';
+import { navigationContents } from '../src/libs/navigationContents';
 
 const hoge = [
   'りんかく',
@@ -23,18 +25,16 @@ const hoge = [
   'ふく',
 ];
 
-console.log(orderPath);
+const CONTENTS_NUMBER = 0;
 
 const Home: NextPage = ({}) => {
   return (
-    <Flex>
-      <Navigation index={0} />
-      <Box w="fit-content" margin="0 auto" p="120px 0">
-        <Heading data={'オーダー管理'} />
-        <OriginalSpacer size="64px" />
-        <Data heading={orderApiHeading} orderApi={orderApi} />
-      </Box>
-    </Flex>
+    <Contents
+      index={CONTENTS_NUMBER}
+      data={CONTENTS_NUMBER}
+      back={undefined}
+      components={<Data heading={orderApiHeading} orderApi={orderApi} />}
+    />
   );
 };
 

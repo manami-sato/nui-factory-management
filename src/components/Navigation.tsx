@@ -1,20 +1,12 @@
 import { FC } from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 import OriginalSpacer from './OriginalSpacer';
+import { navigationContents } from '../libs/navigationContents';
 
 type Props = {
   index: number;
 };
-
-const navigationContents: {
-  name: string;
-  path: string;
-}[] = [
-  { name: 'オーダー管理', path: '/' },
-  { name: 'お問い合わせ', path: '/message' },
-];
 
 const Navigation: FC<Props> = ({ index }) => {
   return (
@@ -26,7 +18,7 @@ const Navigation: FC<Props> = ({ index }) => {
       p="48px 0"
       fontWeight="bold"
     >
-      <NextLink passHref href={'/'}>
+      <NextLink passHref href="/">
         <Text
           p="0 32px"
           opacity="1"
