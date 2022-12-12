@@ -1,15 +1,12 @@
-import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Contents from '../../src/components/Contents';
-import Heading from '../../src/components/Heading';
-import Navigation from '../../src/components/Navigation';
-import OriginalSpacer from '../../src/components/OriginalSpacer';
-import { nuiApi, orderApi, orderPath } from '../../src/libs/api';
-import { orderApiType } from '../../src/types/api';
+import Nui from '../../src/components/Nui';
+import { nuiApi, nuiPath } from '../../src/libs/api';
+import { nuiApiType } from '../../src/types/api';
 
 type Props = {
   id: string;
-  data: orderApiType;
+  data: nuiApiType;
 };
 
 const CONTENTS_NUMBER = 0;
@@ -20,6 +17,7 @@ const Home: NextPage<Props> = ({ id, data }) => {
       index={CONTENTS_NUMBER}
       data={`ぬいぐるみオーダー:${id}`}
       back={CONTENTS_NUMBER}
+      components={<Nui api={data} />}
     />
   );
 };
@@ -27,10 +25,9 @@ const Home: NextPage<Props> = ({ id, data }) => {
 export default Home;
 
 export const getStaticPaths = () => {
-  const paths = orderPath.map((item: string) => ({
+  const paths = nuiPath.map((item) => ({
     params: { id: item },
   }));
-
   return {
     paths,
     fallback: false,
@@ -42,11 +39,14 @@ export const getStaticProps = async ({
 }: {
   params: { id: string };
 }) => {
-  nuiApi.filter((item: string) => item === params.id);
+  const data = nuiApi.filter((item: nuiApiType) => item.id === params.id);
+  const stringifyData = JSON.stringify(JSON.stringify(data[0]));
+  const parseData = JSON.parse(JSON.parse(stringifyData));
+
   return {
     props: {
       id: params.id,
-      data: nuiApi[0],
+      data: parseData,
     },
   };
 };

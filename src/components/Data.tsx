@@ -1,8 +1,6 @@
 import { FC } from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
-import OriginalSpacer from './OriginalSpacer';
 import { orderApiType, messageApiType } from '../types/api';
 
 type Props = {

@@ -1,8 +1,3 @@
-import { useState } from 'react';
-import { messageApiType, nuiApiType, orderApiType } from '../types/api';
-import * as icon from '../libs/svg';
-// export const nuiApi: string[] = ['aDsafSvd', 'DNrgakJ'];
-
 import outlineNormal from '../../src/assets/parts/parts_outline_normal';
 
 import eyesNormal from '../../src/assets/parts/parts_eyes_normal';
@@ -69,200 +64,57 @@ import accessory02Pierce02 from '../../src/assets/parts/parts_accessory-02_pierc
 
 import clothesTShirt from '../../src/assets/parts/parts_clothes_t-shirt';
 
-export const nuiApi: nuiApiType[] = [
-  {
-    id: 'aDsafSvd',
-    parts: {
-      outline: {
-        index: [0],
-        color: 'tomato',
-        svg: outlineNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      eyes: {
-        index: [0],
-        color: 'tomato',
-        svg: eyesNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      eyebrows: {
-        index: [0],
-        color: 'tomato',
-        svg: eyebrowsNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      ears: {
-        index: [0],
-        color: 'tomato',
-        svg: earsNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      nose: {
-        index: [0],
-        color: 'tomato',
-        svg: noseNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      cheeks: {
-        index: [0],
-        color: 'tomato',
-        svg: cheeksCircle,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      mouth: {
-        index: [0],
-        color: 'tomato',
-        svg: mouthNormal,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      bang: {
-        index: [0],
-        color: 'tomato',
-        svg: bangPattsun,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      backHair: {
-        index: [0],
-        color: 'tomato',
-        svg: backHairShort,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      haiOption: {
-        index: [0],
-        color: 'tomato',
-        svg: hairOptionSide,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      accessory01: {
-        index: [0],
-        color: 'tomato',
-        svg: accessory01Pierce01,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      accessory02: {
-        index: [0],
-        color: 'tomato',
-        svg: accessory02Pierce02,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-      clothes: {
-        index: [0],
-        color: 'tomato',
-        svg: clothesTShirt,
-        position: {
-          x: 0,
-          y: 0,
-        },
-      },
-    },
-  },
+export default [
+  eyesNormal,
+  eyesDown,
+  eyesUp,
+  eyesUhhm,
+  eyesFun,
+  eyesParallel,
+  eyebrowsNormal,
+  eyebrowsDown,
+  eyebrowsUp,
+  eyebrowsBold,
+  eyebrowsMaro,
+  eyebrowsParallel,
+  earsNormal,
+  earsElf,
+  noseNormal,
+  cheeksCircle,
+  cheeksLine,
+  mouthNormal,
+  mouthSmiley,
+  mouthPero,
+  mouthUhhm,
+  mouthTriangle,
+  mouthParallel,
+  mouthDuck,
+  mouthOh,
+  bangPattsun,
+  bangLightLeft,
+  bangLightRight,
+  bangHeavyLeft,
+  bangHeavyRight,
+  bangCenter,
+  bangPompadour,
+  bangBrushUpLeft,
+  bangBrushUpRight,
+  bangShortLeft,
+  bangShortRight,
+  backHairBob,
+  backHairShort,
+  backHairLong,
+  backHairHalfUp,
+  hairOptionSide,
+  hairOptionMesh,
+  hairOptionStupidTop,
+  hairOptionStupidBottom,
+  accessory01MoleLeftEye,
+  accessory01MoleRightEye,
+  accessory01MoleFree,
+  accessory01Freckles,
+  accessory01Pierce01,
+  accessory02Eyelashes,
+  accessory02Pierce02,
+  clothesTShirt,
 ];
-
-export const orderApi: orderApiType[] = [
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    id: ['0000', '0000', '0000'],
-    status: '未発送',
-    nui: [nuiApi[0].id],
-    goods: [],
-    customer: '三枝明那',
-    total: 10000,
-    settlement: 'クレジット',
-  },
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    id: ['1111', '1111', '1111'],
-    status: '未発送',
-    nui: [nuiApi[0].id],
-    goods: [],
-    customer: '三枝明那',
-    total: 10000,
-    settlement: 'クレジット',
-  },
-];
-
-export const messageApi: messageApiType[] = [
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    id: 'aksdha',
-    messageText: '商品が発送されない',
-    customer: '三枝明那',
-    staff: '不破湊',
-    status: '対応中',
-  },
-  {
-    date: {
-      yyyy: 2022,
-      mm: 0o2,
-      dd: 22,
-    },
-    id: 'aksdha',
-    messageText: '商品が発送されない',
-    customer: '三枝明那',
-    staff: '不破湊',
-    status: '対応中',
-  },
-];
-
-// const setPath = (data: any) => {
-const setPath = () => {
-  let array: string[] = [];
-  for (let i = 0; i < nuiApi.length; i++) {
-    for (let i2 = 0; i2 < nuiApi.length; i2++) {
-      array.push(nuiApi[i].id);
-      // array.push(data[i].id);
-    }
-  }
-  return array;
-};
-
-// // export const messagePath = setPath(messageApi);
-export const nuiPath = setPath();

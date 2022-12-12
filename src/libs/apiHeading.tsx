@@ -18,7 +18,7 @@ export const messageApiHeading: string[] = [
   '対応状況',
 ];
 
-export const orderPartsApiHeading: string[] = [
+export const nuiApiHeading: string[] = [
   'りんかく',
   'め',
   'まゆ',
