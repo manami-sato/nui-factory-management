@@ -71,7 +71,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       backHair: {
-        svg: [0],
+        svg: [4],
         color: 0,
         position: {
           x: 0,
@@ -88,7 +88,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       accessory01: {
-        svg: [0],
+        svg: [0, 1, 2, 3, 4],
         color: 0,
         position: {
           x: 0,
@@ -96,7 +96,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       accessory02: {
-        svg: [0],
+        svg: [0, 1, 2],
         color: 0,
         position: {
           x: 0,
@@ -104,6 +104,14 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       clothes: {
+        svg: [0],
+        color: 0,
+        position: {
+          x: 0,
+          y: 0,
+        },
+      },
+      body: {
         svg: [0],
         color: 0,
         position: {

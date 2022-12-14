@@ -47,6 +47,7 @@ import backHairBob from '../../src/assets/parts/parts_back-hair_bob';
 import backHairShort from '../../src/assets/parts/parts_back-hair_short';
 import backHairHalfUp from '../../src/assets/parts/parts_back-hair_half-up';
 import backHairTieLeft from '../../src/assets/parts/parts_back-hair_tie-left';
+import backHairTieRight from '../../src/assets/parts/parts_back-hair_tie-right';
 
 import hairOptionSide from '../../src/assets/parts/parts_hair-option_side';
 import hairOptionMesh from '../../src/assets/parts/parts_hair-option_mesh';
@@ -63,6 +64,8 @@ import accessory02Eyelashes from '../../src/assets/parts/parts_accessory-02_eyel
 import accessory02Pierce02 from '../../src/assets/parts/parts_accessory-02_pierce-02';
 
 import clothesTShirt from '../../src/assets/parts/parts_clothes_t-shirt';
+
+import bodyNormal from '../../src/assets/parts/parts_body_normal';
 
 export const partsColor: string[] = [
   '#d3181a',
@@ -117,7 +120,13 @@ export const partsSvgArray: any[][] = [
     bangShortLeft,
     bangShortRight,
   ],
-  [backHairBob, backHairShort, backHairHalfUp],
+  [
+    backHairBob,
+    backHairShort,
+    backHairHalfUp,
+    backHairTieLeft,
+    backHairTieRight,
+  ],
   [hairOptionSide, hairOptionMesh, hairOptionStupidTop, hairOptionStupidBottom],
   [
     accessory01MoleLeftEye,
@@ -128,4 +137,5 @@ export const partsSvgArray: any[][] = [
   ],
   [accessory02Eyelashes, accessory02Pierce02],
   [clothesTShirt],
+  [bodyNormal],
 ];

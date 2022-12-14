@@ -6,6 +6,7 @@ function SvgComponent(props: any) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 26.12 47.08"
       {...props}
+      className="parts_accessory-01_pierce-01"
     >
       <defs>
         <style>{'.cls-1{fill:#212121}'}</style>

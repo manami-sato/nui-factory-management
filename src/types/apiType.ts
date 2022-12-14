@@ -51,6 +51,7 @@ export type nuiApiType = {
     accessory01: nuiPartsType;
     accessory02: nuiPartsType;
     clothes: nuiPartsType;
+    body: nuiPartsType;
   };
 };
 

@@ -5,6 +5,7 @@ function SvgComponent(props: any) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 13.56 13.56"
       {...props}
+      className="parts_accessory-02_pierce-02"
     >
       <g data-name="\u30EC\u30A4\u30E4\u30FC 1">
         <circle cx={6.78} cy={6.78} r={2.78} fill="#fff" />

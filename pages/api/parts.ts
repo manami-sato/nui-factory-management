@@ -104,6 +104,13 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
     },
+    {
+      titleJa: 'からだ',
+      titleEn: 'body',
+      color: partsSkinColor,
+      symmetry: false,
+      colorPicker: false,
+    },
     // 色味本はいくつか作って、カラーコードの指定もできるようにする
   ]);
 }
