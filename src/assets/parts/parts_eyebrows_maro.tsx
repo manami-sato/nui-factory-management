@@ -12,7 +12,7 @@ function SvgComponent(props: any) {
         rx={6.62}
         ry={5.41}
         transform="rotate(-20.19 6.486 5.559)"
-        fill="#212121"
+        className="colorChange"
         data-name="\u30EC\u30A4\u30E4\u30FC 1"
       />
     </svg>

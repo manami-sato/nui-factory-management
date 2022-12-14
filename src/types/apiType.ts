@@ -27,12 +27,11 @@ export type messageApiType = {
 };
 
 export type nuiPartsType = {
-  index: number[];
-  color: string;
-  svg: any;
+  svg: number[];
+  color: number;
   position: {
-    x: number;
-    y: number;
+    x: -1 | 0 | 1;
+    y: -1 | 0 | 1;
   };
 };
 
@@ -53,4 +52,12 @@ export type nuiApiType = {
     accessory02: nuiPartsType;
     clothes: nuiPartsType;
   };
+};
+
+export type partsType = {
+  titleJa: string;
+  titleEn: string;
+  color?: string[];
+  symmetry: boolean;
+  colorPicker: boolean;
 };

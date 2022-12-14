@@ -10,7 +10,7 @@ function SvgComponent(props: any) {
         cx={22.04}
         cy={22.04}
         r={22.04}
-        fill="#ffdee1"
+        className="colorChange"
         data-name="\u30EC\u30A4\u30E4\u30FC 1"
       />
     </svg>

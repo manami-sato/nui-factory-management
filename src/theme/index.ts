@@ -37,6 +37,22 @@ const textStyles = {
     },
     mx: 'auto',
   },
+  tableStyle: {
+    fontSize: '1.4rem',
+    tr: {
+      textAlign: 'center',
+      '&:nth-of-type(odd)': {
+        background: 'gray',
+      },
+      '&:nth-of-type(4n-3)': {
+        td: {
+          fontWeight: 'bold',
+          width: '96px',
+          padding: '10px 0',
+        },
+      },
+    },
+  },
 };
 
 const theme = extendTheme({

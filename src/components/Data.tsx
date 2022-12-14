@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { orderApiType, messageApiType } from '../types/api';
+import { orderApiType, messageApiType } from '../types/apiType';
 
 type Props = {
   heading: string[];

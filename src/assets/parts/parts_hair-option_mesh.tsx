@@ -13,7 +13,7 @@ function SvgComponent(props: any) {
         />
         <path
           d="M37.96 5.8C17.99 27.69 9.76 48.61 6.41 61.01 5.19 54.5 4.29 46.3 5.75 40.09 11.65 14.95 28.52 7.82 37.96 5.8z"
-          fill="#6a6"
+          className="colorChange"
         />
       </g>
     </svg>

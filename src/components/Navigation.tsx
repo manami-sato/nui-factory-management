@@ -12,11 +12,14 @@ const Navigation: FC<Props> = ({ index }) => {
   return (
     <Box
       w="240px"
-      h="100vh"
+      // h="100%"
+      minH="100vh"
       bg="black"
       color="white"
       p="48px 0"
       fontWeight="bold"
+      pos="fixed"
+      inset="0 auto auto 0"
     >
       <NextLink passHref href="/">
         <Text

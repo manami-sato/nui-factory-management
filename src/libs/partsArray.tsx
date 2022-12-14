@@ -4,7 +4,7 @@ import eyesNormal from '../../src/assets/parts/parts_eyes_normal';
 import eyesDown from '../../src/assets/parts/parts_eyes_down';
 import eyesUp from '../../src/assets/parts/parts_eyes_up';
 import eyesUhhm from '../../src/assets/parts/parts_eyes_uhhm';
-import eyesFun from '../assets/parts/parts_eyes_smiley';
+import eyesSmiley from '../assets/parts/parts_eyes_smiley';
 import eyesParallel from '../../src/assets/parts/parts_eyes_parallel';
 
 import eyebrowsNormal from '../../src/assets/parts/parts_eyebrows_normal';
@@ -45,8 +45,8 @@ import bangShortRight from '../../src/assets/parts/parts_bang_short-right';
 
 import backHairBob from '../../src/assets/parts/parts_back-hair_bob';
 import backHairShort from '../../src/assets/parts/parts_back-hair_short';
-import backHairLong from '../../src/assets/parts/parts_back-hair_long';
 import backHairHalfUp from '../../src/assets/parts/parts_back-hair_half-up';
+import backHairTieLeft from '../../src/assets/parts/parts_back-hair_tie-left';
 
 import hairOptionSide from '../../src/assets/parts/parts_hair-option_side';
 import hairOptionMesh from '../../src/assets/parts/parts_hair-option_mesh';
@@ -64,57 +64,68 @@ import accessory02Pierce02 from '../../src/assets/parts/parts_accessory-02_pierc
 
 import clothesTShirt from '../../src/assets/parts/parts_clothes_t-shirt';
 
-export default [
-  eyesNormal,
-  eyesDown,
-  eyesUp,
-  eyesUhhm,
-  eyesFun,
-  eyesParallel,
-  eyebrowsNormal,
-  eyebrowsDown,
-  eyebrowsUp,
-  eyebrowsBold,
-  eyebrowsMaro,
-  eyebrowsParallel,
-  earsNormal,
-  earsElf,
-  noseNormal,
-  cheeksCircle,
-  cheeksLine,
-  mouthNormal,
-  mouthSmiley,
-  mouthPero,
-  mouthUhhm,
-  mouthTriangle,
-  mouthParallel,
-  mouthDuck,
-  mouthOh,
-  bangPattsun,
-  bangLightLeft,
-  bangLightRight,
-  bangHeavyLeft,
-  bangHeavyRight,
-  bangCenter,
-  bangPompadour,
-  bangBrushUpLeft,
-  bangBrushUpRight,
-  bangShortLeft,
-  bangShortRight,
-  backHairBob,
-  backHairShort,
-  backHairLong,
-  backHairHalfUp,
-  hairOptionSide,
-  hairOptionMesh,
-  hairOptionStupidTop,
-  hairOptionStupidBottom,
-  accessory01MoleLeftEye,
-  accessory01MoleRightEye,
-  accessory01MoleFree,
-  accessory01Freckles,
-  accessory01Pierce01,
-  accessory02Eyelashes,
-  accessory02Pierce02,
-  clothesTShirt,
+export const partsColor: string[] = [
+  '#d3181a',
+  '#e86015',
+  '#f5cc2a',
+  '#f2b3f2',
+  '#23490a',
+  '#4b1796',
+  '#0246cc',
+  '#74c8d6',
+  '#eeeeee',
+];
+
+export const partsSkinColor: string[] = ['#ffe2cc', '#fff0e6', '#ecc09b'];
+
+export const partsLineColor: string[] = ['#212121'];
+
+export const partsSvgArray: any[][] = [
+  [outlineNormal],
+  [eyesNormal, eyesDown, eyesUp, eyesUhhm, eyesSmiley, eyesParallel],
+  [
+    eyebrowsNormal,
+    eyebrowsDown,
+    eyebrowsUp,
+    eyebrowsBold,
+    eyebrowsMaro,
+    eyebrowsParallel,
+  ],
+  [earsNormal, earsElf],
+  [noseNormal],
+  [cheeksCircle, cheeksLine],
+  [
+    mouthNormal,
+    mouthSmiley,
+    mouthPero,
+    mouthUhhm,
+    mouthTriangle,
+    mouthParallel,
+    mouthDuck,
+    mouthOh,
+  ],
+  [
+    bangPattsun,
+    bangLightLeft,
+    bangLightRight,
+    bangHeavyLeft,
+    bangHeavyRight,
+    bangCenter,
+    bangPompadour,
+    bangBrushUpLeft,
+    bangBrushUpRight,
+    bangShortLeft,
+    bangShortRight,
+  ],
+  [backHairBob, backHairShort, backHairHalfUp],
+  [hairOptionSide, hairOptionMesh, hairOptionStupidTop, hairOptionStupidBottom],
+  [
+    accessory01MoleLeftEye,
+    accessory01MoleRightEye,
+    accessory01MoleFree,
+    accessory01Freckles,
+    accessory01Pierce01,
+  ],
+  [accessory02Eyelashes, accessory02Pierce02],
+  [clothesTShirt],
 ];
