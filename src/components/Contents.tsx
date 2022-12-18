@@ -15,13 +15,18 @@ type Props = {
 
 const Contents: FC<Props> = ({ index, data, back, components }) => {
   return (
-    <Flex>
+    <Flex w="100vw" justifyContent="flex-end">
       <Navigation index={index} />
-      <Box w="fit-content" margin="0 auto" p="120px 0">
+      <Flex
+        flexDirection="column"
+        alignItems="center"
+        w="calc(100vw - 240px)"
+        p="120px 0"
+      >
         <Heading data={data} back={back} />
         <OriginalSpacer size="64px" />
         {components !== undefined && components}
-      </Box>
+      </Flex>
     </Flex>
   );
 };

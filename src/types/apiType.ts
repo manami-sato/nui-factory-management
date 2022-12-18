@@ -61,4 +61,5 @@ export type partsType = {
   color?: string[];
   symmetry: boolean;
   colorPicker: boolean;
+  multiple: boolean;
 };

@@ -11,14 +11,13 @@ type Props = {
   nuiPartsApi: partsType[];
 };
 
-type aaa = {
-  title: string;
-  contents: string;
-};
-
-type bbb = {
-  i: number;
-};
+// type aaa = {
+//   title: string;
+//   contents: string;
+// };
+// type bbb = {
+//   i: number;
+// };
 
 const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
   const nuiParts = api.parts;
@@ -56,10 +55,8 @@ const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
   //   ];
   // };
 
-  console.log(nuiPartsApi[0].titleJa);
-
   return (
-    <Flex>
+    <Flex gap="16px">
       <Box>
         <Box as="table" textStyle="tableStyle">
           <Box as="tbody">
@@ -160,156 +157,141 @@ const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
         </Box>
       </Box>
       <Box
-        w="240px"
-        h="240px"
-        // bg="skyblue"
+        w="280px"
+        h="280px"
         pos="relative"
-        // overflow="hidden"
         sx={{
-          '>div': {
-            display: 'flex',
-            justifyContent: 'space-between',
-            margin: 'auto',
-            position: 'absolute',
-            // 1. 後ろ髪, 服
-            // 2. 耳
-            // 3. 輪郭, アクセサリー1, アクセサリー2
-            // 4. 頬, 前髪
-            // 5. 目, 眉, 鼻, 口
-            // 輪郭
-            '&:nth-of-type(1)': {
-              width: '180px',
-              height: '180px',
-              inset: '30px 0 auto 0',
-              zIndex: 3,
-            },
-            // 目
-            '&:nth-of-type(2)': {
-              width: '128px',
-              height: '33px',
-              inset: '130px 0 auto 0',
-              zIndex: 5,
-              svg: {
-                width: '51px',
-              },
-            },
-            // 眉
-            '&:nth-of-type(3)': {
-              width: '100px',
-              inset: '115px 0 auto 0',
-              zIndex: 5,
-              svg: {
-                width: '27px',
-              },
-            },
-            // 耳
-            '&:nth-of-type(4)': {
-              width: '212px',
-              height: '48px',
-              inset: '120px 0 auto 0',
-              zIndex: 2,
-              svg: {
-                width: '34px',
-              },
-            },
-            // 鼻
-            '&:nth-of-type(5)': {
-              width: '1px',
-              height: '5px',
-              inset: '163px 0 auto 0',
-              zIndex: 5,
-              svg: {
-                width: '1px',
-              },
-            },
-            // 頬
-            '&:nth-of-type(6)': {
-              width: '164px',
-              height: '40px',
-              inset: '145px 0 auto 0',
-              zIndex: 3,
-              opacity: 0.8,
-              svg: {
-                width: '40px',
-              },
-            },
-            // 口
-            '&:nth-of-type(7)': {
-              width: '32px',
-              inset: '175px 0 auto 0',
-              zIndex: 5,
-              svg: {
-                width: '32px',
-              },
-            },
-            // 前髪
-            '&:nth-of-type(8)': {
-              width: '194px',
-              inset: '15px 0 auto 0',
-              zIndex: 4,
-              svg: {
-                width: '194px',
-              },
-            },
-            // 後ろ髪
-            '&:nth-of-type(9)': {
-              width: '215px',
-              inset: '4px 0 auto 0',
-              zIndex: 1,
-              svg: {
-                width: '215px',
-              },
-            },
-            // アクセサリー1
-            '&:nth-of-type(11)': {
-              width: '220px',
-              height: '220px',
-              inset: '4px 0 auto 0',
-              zIndex: 3,
-              svg: {
-                position: 'absolute',
-              },
-            },
-            // アクセサリー2
-            '&:nth-of-type(12)': {
-              width: '220px',
-              height: '220px',
-              inset: '4px 0 auto 0',
-              zIndex: 3,
-              svg: {
-                position: 'absolute',
-              },
-            },
-            // 服
-            '&:nth-of-type(13)': {
-              width: '220px',
-              height: '220px',
-              inset: '160px 0 auto 0',
-              zIndex: 2,
-              svg: {
-                position: 'absolute',
-              },
-            },
-            // からだ
-            '&:nth-of-type(14)': {
-              width: '258px',
-              height: '213px',
-              inset: '198px 0 auto 0',
-              zIndex: 1,
-              svg: {
-                position: 'absolute',
-              },
-            },
-            // 土台
-            // '&:nth-of-type(10)': {
-            //   // width: '180px',
-            //   height: '180px',
-            //   inset: '16px 0 auto 0',
-            //   margin: 'auto',
-            //   position: 'relative',
-            //   zIndex: '-1',
-            // },
-          },
+          // '>div': {
+          //   // 1. 後ろ髪, 服
+          //   // 2. 耳
+          //   // 3. 輪郭, アクセサリー1, アクセサリー2
+          //   // 4. 頬, 前髪
+          //   // 5. 目, 眉, 鼻, 口
+          //   // 輪郭
+          //   '&:nth-of-type(1)': {
+          //     width: '180px',
+          //     height: '180px',
+          //     inset: '30px 0 auto 0',
+          //     zIndex: 3,
+          //   },
+          //   // 目
+          //   '&:nth-of-type(2)': {
+          //     width: '128px',
+          //     height: '33px',
+          //     inset: '130px 0 auto 0',
+          //     zIndex: 5,
+          //     svg: {
+          //       width: '51px',
+          //     },
+          //   },
+          //   // 眉
+          //   '&:nth-of-type(3)': {
+          //     width: '100px',
+          //     inset: '115px 0 auto 0',
+          //     zIndex: 5,
+          //     svg: {
+          //       width: '27px',
+          //     },
+          //   },
+          //   // 耳
+          //   '&:nth-of-type(4)': {
+          //     width: '212px',
+          //     height: '48px',
+          //     inset: '120px 0 auto 0',
+          //     zIndex: 2,
+          //     svg: {
+          //       width: '34px',
+          //     },
+          //   },
+          //   // 鼻
+          //   '&:nth-of-type(5)': {
+          //     width: '1px',
+          //     height: '5px',
+          //     inset: '163px 0 auto 0',
+          //     zIndex: 5,
+          //     svg: {
+          //       width: '1px',
+          //     },
+          //   },
+          //   // 頬
+          //   '&:nth-of-type(6)': {
+          //     width: '164px',
+          //     height: '40px',
+          //     inset: '145px 0 auto 0',
+          //     zIndex: 3,
+          //     opacity: 0.8,
+          //     svg: {
+          //       width: '40px',
+          //     },
+          //   },
+          //   // 口
+          //   '&:nth-of-type(7)': {
+          //     width: '32px',
+          //     inset: '175px 0 auto 0',
+          //     zIndex: 5,
+          //     svg: {
+          //       width: '32px',
+          //     },
+          //   },
+          //   // 前髪
+          //   '&:nth-of-type(8)': {
+          //     width: '194px',
+          //     inset: '15px 0 auto 0',
+          //     zIndex: 4,
+          //     svg: {
+          //       width: '194px',
+          //     },
+          //   },
+          //   // 後ろ髪
+          //   '&:nth-of-type(9)': {
+          //     width: '215px',
+          //     inset: '4px 0 auto 0',
+          //     zIndex: 1,
+          //     svg: {
+          //       width: '215px',
+          //     },
+          //   },
+          //   // アクセサリー1
+          //   '&:nth-of-type(11)': {
+          //     width: '220px',
+          //     height: '220px',
+          //     inset: '4px 0 auto 0',
+          //     zIndex: 3,
+          //     svg: {
+          //       position: 'absolute',
+          //     },
+          //   },
+          //   // アクセサリー2
+          //   '&:nth-of-type(12)': {
+          //     width: '220px',
+          //     height: '220px',
+          //     inset: '4px 0 auto 0',
+          //     zIndex: 3,
+          //     svg: {
+          //       position: 'absolute',
+          //     },
+          //   },
+          //   // 服
+          //   '&:nth-of-type(13)': {
+          //     width: '220px',
+          //     height: '220px',
+          //     inset: '160px 0 auto 0',
+          //     zIndex: 2,
+          //     svg: {
+          //       position: 'absolute',
+          //     },
+          //   },
+          //   // からだ
+          //   '&:nth-of-type(14)': {
+          //     width: '258px',
+          //     height: '213px',
+          //     inset: '198px 0 auto 0',
+          //     zIndex: 1,
+          //     svg: {
+          //       position: 'absolute',
+          //     },
+          //   },
+          // },
           '.parts_accessory-01_mole-leftEye': {
             width: '3px',
             height: '3px',
@@ -347,303 +329,180 @@ const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
           },
         }}
       >
-        <Box>
+        {nuiPartsApi.map((item: partsType, i) => (
           <Box
-            as={partsSvgArray[0][nuiArray[0].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[0].titleEn}
+            key={item.titleEn + i}
+            display="flex"
+            justifyContent="space-between"
+            margin="auto"
+            position="absolute"
             sx={{
-              ...(nuiPartsApi[0].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[0].color[nuiArray[0].color],
+              // 1. 後ろ髪, 服
+              // 2. 耳
+              // 3. 輪郭, アクセサリー1, アクセサリー2
+              // 4. 頬, 前髪
+              // 5. 目, 眉, 鼻, 口
+              // 輪郭
+              ...(i === 0 && {
+                width: '180px',
+                height: '180px',
+                inset: '30px 0 auto 0',
+                zIndex: 3,
+              }),
+              // 目
+              ...(i === 1 && {
+                width: '128px',
+                height: '33px',
+                inset: '130px 0 auto 0',
+                zIndex: 5,
+                svg: {
+                  width: '51px',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[1][nuiArray[1].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[1].titleEn}
-            sx={{
-              ...(nuiPartsApi[1].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[1].color[nuiArray[1].color],
+              // 眉
+              ...(i === 2 && {
+                width: '100px',
+                inset: '115px 0 auto 0',
+                zIndex: 5,
+                svg: {
+                  width: '27px',
                 },
               }),
-            }}
-          />
-          <Box
-            as={partsSvgArray[1][nuiArray[1].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            inset="0 0 auto auto"
-            transform="scale(-1, 1)"
-            key={nuiPartsApi[1].titleEn}
-            sx={{
-              ...(nuiPartsApi[1].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[1].color[nuiArray[1].color],
+              // 耳
+              ...(i === 3 && {
+                width: '212px',
+                height: '48px',
+                inset: '120px 0 auto 0',
+                zIndex: 2,
+                svg: {
+                  width: '34px',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[2][nuiArray[2].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[2].titleEn}
-            sx={{
-              ...(nuiPartsApi[2].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[2].color[nuiArray[2].color],
+              // 鼻
+              ...(i === 4 && {
+                width: '1px',
+                height: '5px',
+                inset: '163px 0 auto 0',
+                zIndex: 5,
+                svg: {
+                  width: '1px',
                 },
               }),
-            }}
-          />
-          <Box
-            as={partsSvgArray[2][nuiArray[2].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            inset="0 0 auto auto"
-            transform="scale(-1, 1)"
-            key={nuiPartsApi[2].titleEn}
-            sx={{
-              ...(nuiPartsApi[2].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[2].color[nuiArray[2].color],
+              // 頬
+              ...(i === 5 && {
+                width: '164px',
+                height: '40px',
+                inset: '145px 0 auto 0',
+                zIndex: 3,
+                opacity: 0.8,
+                svg: {
+                  width: '40px',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[3][nuiArray[3].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[3].titleEn}
-            sx={{
-              ...(nuiPartsApi[3].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[3].color[nuiArray[3].color],
+              // 口
+              ...(i === 6 && {
+                width: '32px',
+                inset: '175px 0 auto 0',
+                zIndex: 5,
+                svg: {
+                  width: '32px',
                 },
               }),
-            }}
-          />
-          <Box
-            as={partsSvgArray[3][nuiArray[3].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            inset="0 0 auto auto"
-            transform="scale(-1, 1)"
-            key={nuiPartsApi[3].titleEn}
-            sx={{
-              ...(nuiPartsApi[3].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[3].color[nuiArray[3].color],
+              // 前髪
+              ...(i === 7 && {
+                width: '194px',
+                inset: '15px 0 auto 0',
+                zIndex: 4,
+                svg: {
+                  width: '194px',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[4][nuiArray[4].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[4].titleEn}
-            sx={{
-              ...(nuiPartsApi[4].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[4].color[nuiArray[4].color],
+              // 後ろ髪
+              ...(i === 8 && {
+                width: '215px',
+                inset: '4px 0 auto 0',
+                zIndex: 1,
+                svg: {
+                  width: '215px',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[5][nuiArray[5].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[5].titleEn}
-            sx={{
-              ...(nuiPartsApi[5].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[5].color[nuiArray[5].color],
+              // 髪オプション
+              ...(i === 9 && {}),
+              // アクセサリー1
+              ...(i === 10 && {
+                width: '220px',
+                height: '220px',
+                inset: '4px 0 auto 0',
+                zIndex: 3,
+                svg: {
+                  position: 'absolute',
                 },
               }),
-            }}
-          />
-          <Box
-            as={partsSvgArray[5][nuiArray[5].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            inset="0 0 auto auto"
-            transform="scale(-1, 1)"
-            key={nuiPartsApi[5].titleEn}
-            sx={{
-              ...(nuiPartsApi[5].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[5].color[nuiArray[5].color],
+              // アクセサリー2
+              ...(i === 11 && {
+                width: '220px',
+                height: '220px',
+                inset: '4px 0 auto 0',
+                zIndex: 3,
+                svg: {
+                  position: 'absolute',
                 },
               }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[6][nuiArray[6].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[6].titleEn}
-            sx={{
-              ...(nuiPartsApi[6].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[6].color[nuiArray[6].color],
-                },
+              // 服
+              ...(i === 12 && {
+                width: '220px',
+                height: '220px',
+                inset: '160px 0 auto 0',
+                zIndex: 2,
+              }),
+              // からだ
+              ...(i === 13 && {
+                width: '258px',
+                height: '213px',
+                inset: '198px 0 auto 0',
+                zIndex: 1,
               }),
             }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[7][nuiArray[7].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[7].titleEn}
-            sx={{
-              ...(nuiPartsApi[7].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[7].color[nuiArray[7].color],
-                },
-              }),
-            }}
-          />
-        </Box>
-        <Box>
-          <Box
-            as={partsSvgArray[8][nuiArray[8].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            key={nuiPartsApi[8].titleEn}
-            sx={{
-              ...(nuiPartsApi[8].color !== undefined && {
-                '.colorChange': {
-                  // @ts-ignore
-                  fill: nuiPartsApi[8].color[nuiArray[8].color],
-                },
-              }),
-            }}
-          />
-        </Box>
-        <Box></Box>
-        <Box>
-          {nuiArray[10].svg.map((item, i) => (
-            <Box
-              as={partsSvgArray[10][nuiArray[10].svg[item]]}
-              w="100%"
-              h="100%"
-              objectFit="contain"
-              key={nuiPartsApi[10].titleEn}
-              sx={{
-                ...(nuiPartsApi[10].color !== undefined && {
-                  '.colorChange': {
-                    // @ts-ignore
-                    fill: nuiPartsApi[10].color[nuiArray[10].color],
-                  },
-                }),
-              }}
-            />
-          ))}
-        </Box>
-        <Box>
-          {nuiArray[11].svg.map((item, i) => (
-            <>
-              <Box
-                as={partsSvgArray[11][nuiArray[11].svg[item]]}
-                w="100%"
-                h="100%"
-                objectFit="contain"
-                key={nuiPartsApi[11].titleEn}
-                sx={{
-                  ...(nuiPartsApi[11].color !== undefined && {
-                    '.colorChange': {
-                      // @ts-ignore
-                      fill: nuiPartsApi[11].color[nuiArray[11].color],
-                    },
-                  }),
-                }}
-              />
-              <Box
-                as={partsSvgArray[11][nuiArray[11].svg[item]]}
-                w="100%"
-                h="100%"
-                objectFit="contain"
-                key={nuiPartsApi[11].titleEn}
-                sx={{
-                  ...(nuiPartsApi[11].color !== undefined && {
-                    '.colorChange': {
-                      // @ts-ignore
-                      fill: nuiPartsApi[11].color[nuiArray[11].color],
-                    },
-                  }),
-                }}
-              />
-            </>
-          ))}
-        </Box>
-        <Box>
-          {nuiArray[12].svg.map((item, i) => (
-            <Box
-              as={partsSvgArray[12][nuiArray[12].svg[item]]}
-              w="100%"
-              h="100%"
-              objectFit="contain"
-              key={nuiPartsApi[12].titleEn}
-              sx={{
-                ...(nuiPartsApi[12].color !== undefined && {
-                  '.colorChange': {
-                    // @ts-ignore
-                    fill: nuiPartsApi[12].color[nuiArray[12].color],
-                  },
-                }),
-              }}
-            />
-          ))}
-        </Box>
-        <Box>
+          >
+            {nuiArray[i].svg.map((svg: number, i2) => (
+              <>
+                <Box
+                  as={partsSvgArray[i][svg]}
+                  w="100%"
+                  h="100%"
+                  // position="absolute"
+                  objectFit="contain"
+                  sx={{
+                    ...(item.color !== undefined && {
+                      '.colorChange': {
+                        fill: item.color[nuiArray[i].color],
+                      },
+                    }),
+                  }}
+                />
+                {item.symmetry && (
+                  <Box
+                    as={partsSvgArray[i][svg]}
+                    w="100%"
+                    h="100%"
+                    objectFit="contain"
+                    inset="0 0 auto auto"
+                    transform="scale(-1, 1)"
+                    sx={{
+                      ...(item.color !== undefined && {
+                        '.colorChange': {
+                          // @ts-ignore
+                          fill: item.color[nuiArray[i].color],
+                        },
+                      }),
+                    }}
+                  />
+                )}
+              </>
+            ))}
+          </Box>
+        ))}
+        {/* <Box>
           {nuiArray[13].svg.map((item, i) => (
             <Box
               as={partsSvgArray[13][nuiArray[13].svg[item]]}
@@ -661,55 +520,7 @@ const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
               }}
             />
           ))}
-        </Box>
-        {/* <Box pos="absolute">
-          <Box
-            as="img"
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            pos="absolute"
-            opacity={1}
-            src={`https://images.microcms-assets.io/assets/671f68dcd0044e13809d90302044e2a2/61939e68ba174deb9861a0915a912034/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88%2069%404x.png`}
-          />
         </Box> */}
-        {/* {nuiPartsApi[0].symmetry && (
-            <Box
-              as={partsSvgArray[0][nuiArray[0].svg[0]]}
-              w="100%"
-              h="100%"
-              objectFit="contain"
-              pos="absolute"
-              inset="0 0 auto auto"
-              transform="scale(-1, 1)"
-              key={nuiPartsApi[0].titleEn}
-              sx={{
-                ...(nuiPartsApi[0].color !== undefined && {
-                  '.colorChange': {
-                    // @ts-ignore
-                    fill: nuiPartsApi[0].color[nuiArray[0].color],
-                  },
-                }),
-              }}
-            />
-          )} */}
-        {/* {nuiPartsApi.map((item: partsType, i) => (
-          <Box
-            as={partsSvgArray[i][nuiArray[i].svg[0]]}
-            w="100%"
-            h="100%"
-            objectFit="contain"
-            pos="absolute"
-            key={item.titleEn + i}
-            sx={{
-              ...(item.color !== undefined && {
-                '.colorChange': {
-                  fill: item.color[nuiArray[i].color],
-                },
-              }),
-            }}
-          />
-        ))} */}
       </Box>
     </Flex>
   );

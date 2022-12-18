@@ -47,7 +47,7 @@ const textStyles = {
       '&:nth-of-type(4n-3)': {
         td: {
           fontWeight: 'bold',
-          width: '96px',
+          width: '88px',
           padding: '10px 0',
         },
       },

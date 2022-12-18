@@ -15,7 +15,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       eyes: {
-        svg: [2],
+        svg: [0],
         color: 0,
         position: {
           x: 0,
@@ -23,7 +23,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       eyebrows: {
-        svg: [5],
+        svg: [0],
         color: 0,
         position: {
           x: 0,
@@ -31,7 +31,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       ears: {
-        svg: [0],
+        svg: [1],
         color: 1,
         position: {
           x: 0,
@@ -55,7 +55,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       mouth: {
-        svg: [3],
+        svg: [0],
         color: 0,
         position: {
           x: 0,
@@ -63,7 +63,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       bang: {
-        svg: [2],
+        svg: [0],
         color: 0,
         position: {
           x: 0,
@@ -71,7 +71,7 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       backHair: {
-        svg: [4],
+        svg: [0],
         color: 0,
         position: {
           x: 0,
@@ -79,9 +79,8 @@ export const nuiApi: nuiApiType[] = [
         },
       },
       haiOption: {
-        svg: [1],
+        svg: [0],
         color: 0,
-
         position: {
           x: 0,
           y: 0,

@@ -13,7 +13,6 @@ type Props = {
 const CONTENTS_NUMBER = 0;
 
 const Home: NextPage<Props> = ({ id, data, partsApidata }) => {
-  console.log(partsApidata[0]);
 
   return (
     <Contents
