@@ -470,7 +470,6 @@ const Nui: FC<Props> = ({ api, nuiPartsApi }) => {
                   as={partsSvgArray[i][svg]}
                   w="100%"
                   h="100%"
-                  // position="absolute"
                   objectFit="contain"
                   sx={{
                     ...(item.color !== undefined && {
