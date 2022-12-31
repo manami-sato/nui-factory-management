@@ -4,7 +4,6 @@ import { partsType } from '../../src/types/apiType';
 
 import {
   partsColor,
-  partsLineColor,
   partsSkinColor,
 } from '../../src/libs/partsArray';
 
@@ -20,6 +19,9 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: true,
     },
     {
       titleJa: 'め',
@@ -28,14 +30,20 @@ export default function goods(
       symmetry: true,
       colorPicker: true,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'まゆ',
       titleEn: 'eyebrows',
       color: undefined,
       symmetry: true,
-      colorPicker: true,
+      colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'みみ',
@@ -44,6 +52,9 @@ export default function goods(
       symmetry: true,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: true,
     },
     {
       titleJa: 'はな',
@@ -52,14 +63,20 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'ほほ',
       titleEn: 'cheeks',
-      color: ['#ffdfc0', '#ffdee1'],
+      color: ['#ff8b1b5c', '#ff8a947d'],
       symmetry: true,
       colorPicker: false,
       multiple: false,
+      reversal: false,
+      noselected: true,
+      skin: false,
     },
     {
       titleJa: 'くち',
@@ -68,6 +85,9 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'まえがみ',
@@ -76,6 +96,9 @@ export default function goods(
       symmetry: false,
       colorPicker: true,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'うしろがみ',
@@ -84,6 +107,9 @@ export default function goods(
       symmetry: false,
       colorPicker: true,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'かみのオプション',
@@ -92,6 +118,9 @@ export default function goods(
       symmetry: false,
       colorPicker: true,
       multiple: true,
+      reversal: true,
+      noselected: true,
+      skin: false,
     },
     {
       titleJa: 'こもの1',
@@ -100,22 +129,20 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
       multiple: true,
-    },
-    {
-      titleJa: 'こもの2',
-      titleEn: 'accessory-02',
-      color: undefined,
-      symmetry: true,
-      colorPicker: false,
-      multiple: true,
+      reversal: true,
+      noselected: true,
+      skin: false,
     },
     {
       titleJa: 'ふく',
       titleEn: 'clothes',
-      color: partsColor,
+      color: undefined,
       symmetry: false,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: false,
     },
     {
       titleJa: 'からだ',
@@ -124,7 +151,9 @@ export default function goods(
       symmetry: false,
       colorPicker: false,
       multiple: false,
+      reversal: true,
+      noselected: false,
+      skin: true,
     },
-    // 色味本はいくつか作って、カラーコードの指定もできるようにする
   ]);
 }

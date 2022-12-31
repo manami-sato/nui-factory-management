@@ -6,19 +6,20 @@ import { orderApiType, messageApiType } from '../types/apiType';
 type Props = {
   heading: string[];
   orderApi?: orderApiType[];
+  nuiApi?: string[];
   messageApi?: messageApiType[];
 };
 
-const Data: FC<Props> = ({ heading, orderApi, messageApi }) => {
+const Data: FC<Props> = ({ heading, orderApi, nuiApi, messageApi }) => {
   let dataArray: any[][] = [];
-  if (orderApi !== undefined) {
+  if (orderApi !== undefined && nuiApi !== undefined) {
     for (let i = 0; i < orderApi.length; i++) {
       dataArray.push([]);
       dataArray[i].push(
         `${orderApi[i].date.yyyy}/${orderApi[i].date.mm}/${orderApi[i].date.dd}`,
         orderApi[i].id,
         orderApi[i].status,
-        orderApi[i].nui,
+        nuiApi[i],
         orderApi[i].goods,
         orderApi[i].customer,
         orderApi[i].total,
